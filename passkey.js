@@ -60,9 +60,9 @@ document.addEventListener('DOMContentLoaded', async()=>{
    const list=document.getElementById('pk-list');list.replaceChildren();
    for(const row of await api('list')) {
     const li=document.createElement('li');li.textContent=`${row.name}（${row.created}） `;
-    const b=document.createElement('button');b.type='button';b.textContent='删除';
+    const b=document.createElement('button');b.type='button';b.className='button';b.textContent='删除';
     b.onclick=run(async()=>{await api('remove',{id:row.id,...identity()});clearIdentity();await refresh();status.textContent='已删除';});li.append(b);
-    const rename=document.createElement('button');rename.type='button';rename.textContent='重命名';
+    const rename=document.createElement('button');rename.type='button';rename.className='button';rename.textContent='重命名';
     rename.onclick=run(async()=>{const name=prompt('密钥名称',row.name);if(name===null){status.textContent='';return;}await api('rename',{id:row.id,name,...identity()});clearIdentity();await refresh();status.textContent='已重命名';});li.append(rename);list.append(li);
    }
   }
