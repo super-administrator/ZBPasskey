@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='utf-8'?>
+<plugin version="php">
+<id>ZBPasskey</id><name>通行密钥登录</name><url>https://github.com/super-administrator/ZBPasskey</url>
+<note>WebAuthn 通行密钥登录及个人密钥管理；需要 PHP 7.4+。</note>
+<description>支持指纹、面容、PIN 和安全密钥。保留原密码登录。</description>
+<path>main.php</path><include>include.php</include><level>1</level>
+<author><name>superadmin &amp; codex</name><email /><url>https://github.com/super-administrator/ZBPasskey</url></author>
+<source><name /><email /><url /></source>
+<adapted>173540</adapted><version>0.1.2</version><phpver>7.4</phpver>
+<pubdate>2026-10-14</pubdate><modified>2026-10-15</modified><price>0</price>
+</plugin>
